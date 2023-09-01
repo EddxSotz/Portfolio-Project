@@ -215,7 +215,7 @@ body {
 .background {
   background-color: #003049;
   background-image: url("../images/Main_Background.svg");
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   height: fit-content;
   overflow: hidden;
@@ -223,20 +223,25 @@ body {
 }
 
 .main-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: space-between;
+  padding: 6rem 1rem;
+  position: relative;
+}
+
+.Intro {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  padding: 8rem 1rem;
-  position: relative;
 }
 
 #Social_Media_Icons {
   display: flex;
   flex-direction: row;
-  margin-top: 1rem;
-  width: 20px;
   justify-content: flex-start;
-  gap: 2rem;
+  gap: 3rem;
+  order: 2;
+  margin-top: 1rem;
 }
 
 #Social_Media_Icons a {
@@ -244,10 +249,9 @@ body {
 }
 
 #hero_image {
-  max-width: 50%;
   position: absolute;
-  bottom: 50%;
   left: 60%;
+  width: 50%;
 }
 
 #down-arrow {
@@ -278,21 +282,25 @@ body {
 /************** Media Queries *************/
 @media (min-width: 768px) {
   .main-section {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .Intro {
     flex-direction: row;
     align-items: center;
   }
 
   #hero_image {
     position: initial;
+    width: 100%;
   }
 
   #Social_Media_Icons {
     display: flex;
     flex-direction: column;
-    order: -1;
+    order: 0;
     margin-right: 3rem;
     justify-content: space-around;
-    height: 200px;
   }
 }
 
