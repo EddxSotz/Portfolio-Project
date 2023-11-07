@@ -70,11 +70,6 @@ body {
   color: var(--button_font_color);
 }
 
-.skills.text_styles ul li {
-  font-size: var(--list_item_font_size);
-  color: var(--list_item_font_color);
-}
-
 /* Web page Header CSS Styles */
 
 .nav-bar {
@@ -377,18 +372,43 @@ body {
   margin-bottom: 1rem;
 }
 
-#tags_featured {
+.tags.featured {
   display: flex;
   flex-direction: row;
   justify-content: left;
   margin-bottom: 2rem;
 }
 
-#tags_featured > li {
-  padding: 8px;
+.tags.featured li {
+  padding: 0.25rem;
   color: #091e42;
   border: solid 1px #091e42;
   margin-right: 5px;
+}
+
+#modal {
+  padding: 1em;
+  margin: auto;
+  max-width: 80%;
+  max-height: 100vh;
+  margin-inline: auto;
+  border: none;
+  box-shadow: 0 0 1em rgb(0 0 0 / 0.3);
+}
+
+#modal::backdrop {
+  background: rgb(0 0 0 / 0.4);
+}
+
+#modal p {
+  color: #091e42;
+}
+
+.btn_container {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: left;
 }
 
 @media (min-width: 768px) {

@@ -31,7 +31,7 @@ const arrayElements = [];
 
 // define objects  with content for each project card
 const mainProject = {
-  title: 'Indie Music Fest', description: 'A complete full fledged responsive website with multiple sections, a separate About page and dinamically generated items. In a few words a stable solid and functional website.', features: ['html', 'css', 'Javascript'], imageURL: 'images/Img_Placeholder.png', link: 'https://relaxed-gecko-38d404.netlify.app/',
+  features: ['html', 'css', 'Javascript'], imageURL: 'images/Img_Placeholder.png', link: 'https://relaxed-gecko-38d404.netlify.app/',
 };
 const project1 = {
   title: 'Awesome Books', description: 'A site mainly focussed on funcionality that stores data on local storage, fully functional.', features: ['html', 'css', 'Javascript'], imageURL: 'images/Img_Placeholder-2.png', link: 'https://gilded-stroopwafel-3e21e8.netlify.app/',
@@ -78,105 +78,19 @@ function removeBlur() {
   document.querySelector('footer').removeAttribute('style', 'filter: blur(5px)');
 }
 
-// Dynamic content for main featured project card
 /* eslint-disable prefer-destructuring */
-const mainProjectContainer = document.querySelector('.featured_project');
-const mainCardContent = document.querySelector('.main_card');
+const modal = document.getElementById("modal");
+const openModal = document.getElementById("see_main_btn");
+const closeModal = document.getElementById("close_btn");
 
-const mainCardH3 = document.createElement('h3');
-mainCardH3.textContent = mainProject.title;
-
-const mainCardP = document.createElement('p');
-mainCardP.textContent = mainProject.description;
-
-const mainCardButton = document.createElement('a');
-mainCardButton.textContent = 'See Project';
-mainCardButton.className = 'project-button';
-
-const mainCardTags = document.createElement('ul');
-mainCardTags.id = 'tags_featured';
-
-let mainCardTagItem = document.createElement('li');
-mainCardTagItem.textContent = mainProject.features[0];
-mainCardTags.appendChild(mainCardTagItem);
-mainCardTagItem = document.createElement('li');
-mainCardTagItem.textContent = mainProject.features[1];
-mainCardTags.appendChild(mainCardTagItem);
-mainCardTagItem = document.createElement('li');
-mainCardTagItem.textContent = mainProject.features[2];
-mainCardTags.appendChild(mainCardTagItem);
-
-mainCardContent.appendChild(mainCardH3);
-mainCardContent.appendChild(mainCardP);
-mainCardContent.appendChild(mainCardTags);
-mainCardContent.appendChild(mainCardButton);
-
-const mainProjectImg = document.createElement('img');
-mainProjectImg.id = 'featured_img';
-mainProjectImg.setAttribute('src', 'images/Img_Placeholder.png');
-
-mainProjectContainer.appendChild(mainCardContent);
-mainProjectContainer.appendChild(mainProjectImg);
-
-// main card pop up action
-mainCardButton.addEventListener('click', () => {
-  const popup = document.createElement('div');
-  popup.className = 'popup_container';
-  popup.classList.add('text_styles');
-
-  const popupHeader = document.createElement('div');
-  popupHeader.className = 'popup_header';
-  popupHeader.appendChild(mainCardH3);
-  popupHeader.appendChild(mainCardTags);
-
-  const popupImg = document.createElement('img');
-  popupImg.setAttribute('src', 'images/Img_Placeholder.png');
-
-  const liveButton = document.createElement('a');
-  liveButton.textContent = ' See Live';
-  liveButton.className = 'project-button';
-  liveButton.setAttribute('href', `${mainProject.link}`);
-
-  const sourceButton = document.createElement('a');
-  sourceButton.textContent = 'See Source';
-  sourceButton.className = 'project-button';
-  sourceButton.setAttribute('href', 'https://github.com/EddxSotz/Capstone-Project-1');
-
-  const seeLiveIcon = document.createElement('img');
-  seeLiveIcon.setAttribute('src', 'images/Icon-see live.svg'); seeLiveIcon.setAttribute('style', 'width: 16px; margin-left: 10px');
-  const sourceIcon = document.createElement('img');
-  sourceIcon.setAttribute('src', 'images/Git-Hub.svg'); sourceIcon.setAttribute('style', 'width: 16px; margin-left: 10px');
-
-  liveButton.appendChild(seeLiveIcon);
-  sourceButton.appendChild(sourceIcon);
-
-  const popupInfo = document.createElement('div');
-  popupInfo.className = 'popup_info';
-  popupInfo.appendChild(mainCardP);
-  popupInfo.appendChild(liveButton);
-  popupInfo.appendChild(sourceButton);
-
-  const closeButton = document.createElement('img');
-  closeButton.setAttribute('src', 'images/Icon - Cancel.svg');
-  closeButton.id = 'close_btn';
-
-  popup.appendChild(closeButton);
-  popup.appendChild(popupInfo);
-  popup.appendChild(popupHeader);
-  popup.appendChild(popupImg);
-
-  document.body.appendChild(popup);
-  addBlur();
-
-  closeButton.addEventListener('click', () => {
-    document.body.removeChild(popup);
-    mainCardContent.appendChild(mainCardH3);
-    mainCardContent.appendChild(mainCardP);
-    mainCardContent.appendChild(mainCardTags);
-    mainCardContent.appendChild(mainCardButton);
-    removeBlur();
-  });
+openModal.addEventListener('click', () => {
+  modal.showModal();
 });
+
+closeModal.addEventListener('click', () => {
+  modal.close();
+});
+
 
 // iterate through each array element and create project card and content dynamically
 /* eslint-disable prefer-destructuring */

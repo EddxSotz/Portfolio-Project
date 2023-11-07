@@ -71,9 +71,31 @@
       </div>
 
       <div class="featured_project">
-        <div class="main_card"></div>
+        <img id="featured_img" src="images/Img_Placeholder.png" alt="Main project image" loading="lazy">
+          <div class="main_card">
+            <h3 class="main_card_title">Indie Music Fest</h3>            
+            <ul class="tags featured">
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>JavaScript</li>
+            </ul>
+            <a href="#" class="project-button" id="see_main_btn">See Project</a>
+          </div>      
       </div>
+
+      <dialog class="modal" id="modal">
+        <img id="featured_img" src="images/Img_Placeholder.png" alt="Main project image" loading="lazy">
+        <h3 class="main_card_title">Indie Music Fest</h3>
+        <p class="main_card_description">A complete full fledged responsive website with multiple sections, a separate About page and dinamically generated items. In a few words a stable solid and functional website.</p>
+        <div class="btn_container">
+          <a href="https://relaxed-gecko-38d404.netlify.app/" class="project-button"><img src="images/Icon-see live.svg" alt="live icon">See Live</a>
+          <a href="https://github.com/EddxSotz/Capstone-Project-1" class="project-button">See Source <img src="images/Git-Hub.svg" alt="github icon"></a>
+        </div>          
+        <img src="images/Icon - Cancel.svg" id="close_btn" alt="close popup button">
+      </dialog>
+
       <div class="grid-container"></div>
+      
     </section>
 
     <!-- About -->
