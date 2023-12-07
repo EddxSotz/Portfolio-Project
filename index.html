@@ -70,32 +70,22 @@
         <span id="top_line"></span>
       </div>
 
-      <div class="featured_project">
-        <img id="featured_img" src="images/Img_Placeholder.png" alt="Main project image" loading="lazy">
-          <div class="main_card">
-            <h3 class="main_card_title">Indie Music Fest</h3>            
-            <ul class="tags featured">
-              <li>HTML5</li>
-              <li>CSS3</li>
-              <li>JavaScript</li>
-            </ul>
-            <a href="#" class="project-button" id="see_main_btn">See Project</a>
-          </div>      
+      <div class="projects-container" id="projects-container">
+        <!-- Project cards will be dynamically added here -->
       </div>
-
-      <dialog class="modal" id="modal">
-        <img id="featured_img" src="images/Img_Placeholder.png" alt="Main project image" loading="lazy">
-        <h3 class="main_card_title">Indie Music Fest</h3>
-        <p class="main_card_description">A complete full fledged responsive website with multiple sections, a separate About page and dinamically generated items. In a few words a stable solid and functional website.</p>
-        <div class="btn_container">
-          <a href="https://relaxed-gecko-38d404.netlify.app/" class="project-button"><img src="images/Icon-see live.svg" alt="live icon">See Live</a>
-          <a href="https://github.com/EddxSotz/Capstone-Project-1" class="project-button">See Source <img src="images/Git-Hub.svg" alt="github icon"></a>
-        </div>          
-        <img src="images/Icon - Cancel.svg" id="close_btn" alt="close popup button">
+      
+      <!-- Modal for project details -->
+      <dialog class="modal" id="projectModal">
+        <div class="modal-content">
+          <span class="close" id="closeModal">&times;</span>
+          <h2 id="modalTitle"></h2>
+          <img src="" alt="Project Image" id="modalImage">
+          <p id="modalDescription"></p>
+          <button id="seeLiveBtn">See Live</button>
+          <button id="seeSourceBtn">See Source</button>
+        </div>
       </dialog>
 
-      <div class="grid-container"></div>
-      
     </section>
 
     <!-- About -->

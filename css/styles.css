@@ -455,10 +455,6 @@ body {
   margin-bottom: 1rem;
 }
 
-.card_content > p {
-  margin-bottom: 2rem;
-}
-
 .card_content > ul {
   display: flex;
   flex-direction: row;
@@ -528,15 +524,6 @@ body {
 }
 
 /* stylelint-disable-next-line no-descending-specificity */
-.popup_info a {
-  display: inline-block;
-  margin-right: 1rem;
-}
-
-.popup_info p {
-  color: #091e42;
-  margin-bottom: 2rem;
-}
 
 #close_btn {
   width: 50px;
