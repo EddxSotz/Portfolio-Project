@@ -64,14 +64,15 @@ let  projects = [
 function createProjectCard(project) {
   const card = document.createElement('div');
   card.classList.add('project-card');
+  const image = project.image;
+  card.style.backgroundImage = `url(${image})`;
+  card.style.backgroundRepeat = 'no-repeat';
+  card.style.backgroundPosition = 'center';
+  card.style.backgroundSize = 'Cover';
 
-  const title = document.createElement('h3');
+  const title = document.createElement('h4');
   title.textContent = project.title;
-
-  const image = document.createElement('img');
-  image.src = project.image;
-  image.alt = project.title;
-
+  
   const seeDetailsBtn = document.createElement('button');
   seeDetailsBtn.textContent = 'See Details';
   seeDetailsBtn.classList.add('project-button')
@@ -80,7 +81,6 @@ function createProjectCard(project) {
   });
 
   card.appendChild(title);
-  card.appendChild(image);
   card.appendChild(seeDetailsBtn);
 
   projectsContainer.appendChild(card);
