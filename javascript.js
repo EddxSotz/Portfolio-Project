@@ -26,7 +26,7 @@ document.querySelectorAll('.nav-item').forEach((n) => n.addEventListener('click'
 
 // Dynamic projects section
 
-let  projects = [
+const projects = [
   {
     title: 'Awesome Books',
     image: 'images/Project_1.png',
@@ -50,15 +50,31 @@ let  projects = [
   },
 ];
 
-  const projectsContainer = document.getElementById('projects-container');
-  const modal = document.getElementById('projectModal');
-  const closeModalBtn = document.getElementById('closeModal');
-  const modalTitle = document.getElementById('modalTitle');
-  const modalImage = document.getElementById('modalImage');
-  const modalDescription = document.getElementById('modalDescription');
-  const seeLiveBtn = document.getElementById('seeLiveBtn');
-  const seeSourceBtn = document.getElementById('seeSourceBtn');
+const projectsContainer = document.getElementById('projects-container');
+const modal = document.getElementById('projectModal');
+const closeModalBtn = document.getElementById('closeModal');
+const modalTitle = document.getElementById('modalTitle');
+const modalImage = document.getElementById('modalImage');
+const modalDescription = document.getElementById('modalDescription');
+const seeLiveBtn = document.getElementById('seeLiveBtn');
+const seeSourceBtn = document.getElementById('seeSourceBtn');
 
+// Function to show modal with project details
+function modalEvent(project) {
+  modalTitle.textContent = project.title;
+  modalImage.src = project.image;
+  modalDescription.textContent = project.description;
+
+  seeLiveBtn.addEventListener('click', () => {
+    window.open(project.liveLink, '_blank');
+  });
+
+  seeSourceBtn.addEventListener('click', () => {
+    window.open(project.sourceLink, '_blank');
+  });
+
+  modal.showModal();
+}
 
 // Function to create project cards dynamically
 function createProjectCard(project) {
@@ -72,11 +88,11 @@ function createProjectCard(project) {
 
   const title = document.createElement('h4');
   title.textContent = project.title;
-  
+
   const seeDetailsBtn = document.createElement('button');
   seeDetailsBtn.textContent = 'See Details';
-  seeDetailsBtn.classList.add('project-button')
-  seeDetailsBtn.addEventListener('click', function () {
+  seeDetailsBtn.classList.add('project-button');
+  seeDetailsBtn.addEventListener('click', () => {
     modalEvent(project);
   });
 
@@ -87,32 +103,13 @@ function createProjectCard(project) {
   projectsContainer.appendChild(card);
 }
 
-// Function to show modal with project details
-function modalEvent(project) {
-  modalTitle.textContent = project.title;
-  modalImage.src = project.image;
-  modalDescription.textContent = project.description;
-
-  seeLiveBtn.addEventListener('click', function () {
-    window.open(project.liveLink, '_blank');
-  });
-
-  seeSourceBtn.addEventListener('click', function () {
-    window.open(project.sourceLink, '_blank');
-  });
-
-  modal.showModal();
-}
-
 // Event listener to close the modal
-closeModalBtn.addEventListener('click', function () {
+closeModalBtn.addEventListener('click', () => {
   modal.close();
 });
 
 // Create project cards for each project in the array
 projects.forEach(createProjectCard);
-
-
 
 // form validations
 const user = document.getElementById('name');
