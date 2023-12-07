@@ -319,7 +319,7 @@ body {
   margin: 4rem auto;
 }
 
-.grid-container {
+#projects-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(327px, 1fr));
   grid-gap: 2rem;
@@ -341,52 +341,7 @@ body {
   cursor: pointer;
 }
 
-/* Featured project card */
-.featured_project {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  margin-bottom: 3rem;
-}
-
-#featured_img {
-  width: 100%;
-  margin-bottom: 2rem;
-}
-
-.main_card {
-  width: 100%;
-  order: 1;
-  margin: 0 auto;
-  max-height: 423px;
-  min-height: 405px;
-}
-
-.main_card p {
-  margin-bottom: 2rem;
-  color: #091e42;
-}
-
-.main_card h3 {
-  font-family: var(--rubik_font_style);
-  margin-bottom: 1rem;
-}
-
-.tags.featured {
-  display: flex;
-  flex-direction: row;
-  justify-content: left;
-  margin-bottom: 2rem;
-}
-
-.tags.featured li {
-  padding: 0.25rem;
-  color: #091e42;
-  border: solid 1px #091e42;
-  margin-right: 5px;
-}
-
-#modal {
+.modal {
   padding: 1em;
   margin: auto;
   max-width: 80%;
@@ -396,11 +351,11 @@ body {
   box-shadow: 0 0 1em rgb(0 0 0 / 0.3);
 }
 
-#modal::backdrop {
+.modal-content::backdrop {
   background: rgb(0 0 0 / 0.4);
 }
 
-#modal p {
+.modal-content p {
   color: #091e42;
 }
 

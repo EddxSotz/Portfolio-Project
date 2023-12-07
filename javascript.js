@@ -74,6 +74,7 @@ function createProjectCard(project) {
 
   const seeDetailsBtn = document.createElement('button');
   seeDetailsBtn.textContent = 'See Details';
+  seeDetailsBtn.classList.add('project-button')
   seeDetailsBtn.addEventListener('click', function () {
     modalEvent(project);
   });
