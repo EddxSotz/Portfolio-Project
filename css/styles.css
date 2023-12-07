@@ -346,7 +346,7 @@ body {
   width: 50%;
   font-size: 1rem;
   position: absolute;
-  top: 80%;
+  top: 85%;
 }
 
 .modal {
@@ -362,6 +362,12 @@ body {
 
 .modal-content p {
   color: #091e42;
+  margin: 0.5rem 0;
+}
+
+#modalImage {
+  width: 100%;
+  margin: 0.5rem 0;
 }
 
 .btn_container {
@@ -397,7 +403,7 @@ body {
 /* Regular cards */
 
 .project-card {
-  background: linear-gradient(to right bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1));
+  background: linear-gradient(to right bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1));
   height: 50vh;
   text-align: center;
   display: flex;
@@ -412,7 +418,11 @@ body {
   padding: 1rem;
   width: 100%;
   color: #091e42;
-  background-color: #fbf8f7;
+}
+
+.project_img {
+  width: 100%;
+  opacity: 0.8;
 }
 
 .project-card:hover {

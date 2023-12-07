@@ -29,21 +29,21 @@ document.querySelectorAll('.nav-item').forEach((n) => n.addEventListener('click'
 let  projects = [
   {
     title: 'Awesome Books',
-    image: 'images/Img_Placeholder-2.png',
+    image: 'images/Project_1.png',
     description: 'A site mainly focussed on funcionality that stores data on local storage, fully functional.',
     liveLink: 'https://gilded-stroopwafel-3e21e8.netlify.app/',
     sourceLink: 'https://github.com/EddxSotz/Awesome_Books',
   },
   {
     title: 'To-do list',
-    image: 'images/Img_Placeholder-3.png',
+    image: 'images/Project_2.png',
     description: 'To-do list" is a tool that helps to organize your day. It simply lists the things that you need to do and allows you to mark them as complete.',
     liveLink: 'https://main--roaring-trifle-02bd57.netlify.app/',
     sourceLink: 'https://github.com/EddxSotz/To-Do-list',
   },
   {
     title: 'Music Festival',
-    image: 'images/Img_Placeholder-4.png',
+    image: 'images/Project_3.png',
     description: 'A simple, responsive, solid and fast website for a Music Festival event, part of the Microverse Curriculum. Built with no Linter errors, correct GitHub Flow and properly documented.',
     liveLink: 'https://relaxed-gecko-38d404.netlify.app/',
     sourceLink: 'https://github.com/EddxSotz/Capstone-Project-1',
@@ -64,11 +64,11 @@ let  projects = [
 function createProjectCard(project) {
   const card = document.createElement('div');
   card.classList.add('project-card');
-  const image = project.image;
-  card.style.backgroundImage = `url(${image})`;
-  card.style.backgroundRepeat = 'no-repeat';
-  card.style.backgroundPosition = 'center';
-  card.style.backgroundSize = 'Cover';
+
+  const image = document.createElement('img');
+  image.classList.add('project_img');
+  image.src = project.image;
+  image.alt = project.title;
 
   const title = document.createElement('h4');
   title.textContent = project.title;
@@ -81,6 +81,7 @@ function createProjectCard(project) {
   });
 
   card.appendChild(title);
+  card.appendChild(image);
   card.appendChild(seeDetailsBtn);
 
   projectsContainer.appendChild(card);
