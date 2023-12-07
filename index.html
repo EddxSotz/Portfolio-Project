@@ -70,10 +70,24 @@
         <span id="top_line"></span>
       </div>
 
-      <div class="featured_project">
-        <div class="main_card"></div>
+      <div class="projects-container" id="projects-container">
+        <!-- Project cards will be dynamically added here -->
       </div>
-      <div class="grid-container"></div>
+      
+      <!-- Modal for project details -->
+      <dialog class="modal" id="projectModal">
+        <div class="modal-content text_styles">
+          <span class="close" id="closeModal"><img src="images/Icon - Cancel.svg" alt="close_popup"></span>
+          <h3 id="modalTitle"></h3>
+          <img src="" alt="Project Image" id="modalImage">
+          <p id="modalDescription"></p>
+          <div class="btn_container">
+            <button id="seeLiveBtn" class="project-button">See Live</button>
+            <button id="seeSourceBtn" class="project-button">See Source</button>
+          </div>          
+        </div>
+      </dialog>
+
     </section>
 
     <!-- About -->
