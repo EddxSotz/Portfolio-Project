@@ -346,7 +346,7 @@ body {
   width: 50%;
   font-size: 1rem;
   position: absolute;
-  top: 85%;
+  bottom: 5%;
 }
 
 .modal {
@@ -354,6 +354,8 @@ body {
   margin: auto;
   border: none;
   box-shadow: 0 0 1em rgb(0 0 0 / 0.3);
+  border-radius: 1rem;
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
 .modal-content::backdrop {
@@ -362,11 +364,11 @@ body {
 
 .modal-content p {
   color: #091e42;
-  margin: 0.5rem 0;
+  margin-bottom: 2rem;
 }
 
 #modalImage {
-  width: 100%;
+  max-width: 100%;
   margin: 0.5rem 0;
 }
 
@@ -400,8 +402,6 @@ body {
   }
 }
 
-/* Regular cards */
-
 .project-card {
   background: linear-gradient(to right bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1));
   height: 50vh;
@@ -410,6 +410,7 @@ body {
   flex-direction: column;
   align-items: center;
   position: relative;
+  border-radius: 1.25rem;
 }
 
 .project-card > h4 {
@@ -422,13 +423,12 @@ body {
 
 .project_img {
   width: 100%;
-  opacity: 0.8;
+  opacity: 0.5;
 }
 
 .project-card:hover {
   background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1));
 }
-/* stylelint-disable-next-line no-descending-specificity */
 
 #closeModal {
   width: 2rem;
@@ -443,9 +443,12 @@ body {
 
 @media (min-width: 768px) {
   .modal-content {
+    display: flex;
     flex-direction: row;
-    width: 90%;
-    margin: 0 5%;
+  }
+
+  .container.details {
+    margin: 4.5rem 0 0 1rem;
   }
 }
 

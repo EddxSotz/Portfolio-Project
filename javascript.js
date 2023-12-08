@@ -64,15 +64,10 @@ function modalEvent(project) {
   modalTitle.textContent = project.title;
   modalImage.src = project.image;
   modalDescription.textContent = project.description;
-
-  seeLiveBtn.addEventListener('click', () => {
-    window.open(project.liveLink, '_blank');
-  });
-
-  seeSourceBtn.addEventListener('click', () => {
-    window.open(project.sourceLink, '_blank');
-  });
-
+  seeLiveBtn.href = project.liveLink;
+  seeLiveBtn.target = '_blank';
+  seeSourceBtn.href = project.sourceLink;
+  seeSourceBtn.target = '_blank';
   modal.showModal();
 }
 
