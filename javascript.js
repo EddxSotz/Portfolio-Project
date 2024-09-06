@@ -28,6 +28,13 @@ document.querySelectorAll('.nav-item').forEach((n) => n.addEventListener('click'
 
 const projects = [
   {
+    title: 'Tic Tac Toe Game',
+    image: 'images/tic_tac_toe.png',
+    description: 'A classic game of Tic Tac Toe, with a simple design and easy to play. Built with React.',
+    liveLink: 'https://frolicking-tapioca-dc0394.netlify.app/',
+    sourceLink: 'https://github.com/EddxSotz/tic-tac-toe-game',
+  },
+  {
     title: 'Awesome Books',
     image: 'images/Project_1.png',
     description: 'A site mainly focussed on funcionality that stores data on local storage, fully functional.',
