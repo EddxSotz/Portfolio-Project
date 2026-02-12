@@ -186,7 +186,7 @@ body {
     margin: 0;
   }
 
-  .nav-menu li {
+  .nav-menu .nav-item {
     text-align: center;
     border-bottom: none;
   }
@@ -262,19 +262,18 @@ body {
   50%,
   80%,
   100% {
-    transform: translateY(0); /* No vertical movement at these keyframes */
+    transform: translateY(0); 
   }
 
   40% {
-    transform: translateY(-20px); /* Bounce up by 20 pixels at 40% keyframe */
+    transform: translateY(-20px); 
   }
 
   60% {
-    transform: translateY(-10px); /* Bounce up by 10 pixels at 60% keyframe */
+    transform: translateY(-10px); 
   }
 }
 
-/************** Media Queries *************/
 @media (min-width: 768px) {
   .main-section {
     grid-template-columns: 1fr 1fr;
@@ -299,10 +298,75 @@ body {
   }
 }
 
-/* PROJECTS SECTION - GRID LAYOUT */
+/* --- NEW SKILLS SECTION STYLES --- */
+#Skills {
+  padding: 4rem 1rem;
+  background-color: #fbf8f7;
+}
 
+.skills_title {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.section_line {
+  display: block;
+  width: 100%;
+  border-bottom: solid 2px #091e42;
+  margin: 1rem auto;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive Grid */
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.skill-info h4 {
+  color: #003049;
+  margin-bottom: 0.5rem;
+}
+.skill-card {  
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.stars {
+  display: flex;
+  gap: 5px;
+}
+
+.star {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  background-color: #ccc;
+  -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"/></svg>') no-repeat center;
+  mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"/></svg>') no-repeat center;
+}
+
+.star.filled {
+  background-color: #f55800;
+}
+
+@media (min-width: 768px) {
+  #Skills {
+    padding: 6rem 4rem;
+  }
+}
+
+
+/* PROJECTS SECTION - GRID LAYOUT */
 .my_work {
-  padding: 8.13rem 1rem;
+  padding: 4rem 1rem;
 }
 
 .works_title {
@@ -325,14 +389,54 @@ body {
   grid-gap: 2rem;
 }
 
+.project-card {
+  /* Keep existing styles, but ensure transition is set */
+  background: white; /* Changed from gradient to white for cleaner look */
+  border-radius: 1.25rem;
+  overflow: hidden; /* Keeps image inside corners */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Bouncy pop */
+  height: auto; /* Let content define height */
+  padding-bottom: 2rem;
+  position: relative;
+}
+
+.project-card:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 20px 30px rgba(0,0,0,0.15);
+  z-index: 2;
+}
+
+.project_img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  opacity: 1; /* Full opacity now */
+  border-bottom: 1px solid #eee;
+}
+
+.project-card h4 {
+  color: #003049;
+  padding: 1rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Button positioning in card */
 .project-button {
   background-color: #06a646;
+  color: #fbf8f7;
+  font-size: var(--button_font_size);
   padding: 0.75rem;
   font-weight: bold;
-  display: block;
-  width: fit-content;
+  display: block;  
   border-radius: 5%;
   transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+  margin: 0 auto;
+  width: 60%;
+  bottom: auto;
 }
 
 .project-button:hover {
@@ -341,13 +445,7 @@ body {
   cursor: pointer;
 }
 
-.project-card .project-button {
-  color: #fbf8f7;
-  width: 50%;
-  font-size: 1rem;
-  position: absolute;
-  bottom: 5%;
-}
+
 
 .modal {
   padding: 1em;
@@ -356,10 +454,11 @@ body {
   box-shadow: 0 0 1em rgb(0 0 0 / 0.3);
   border-radius: 1rem;
   background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(5px);
 }
 
-.modal-content::backdrop {
-  background: rgb(0 0 0 / 0.4);
+.modal::backdrop {  
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .modal-content p {
@@ -386,7 +485,7 @@ body {
 
 @media (min-width: 768px) {
   .my_work {
-    padding: 8.13rem 4rem;
+    padding: 6rem 4rem;
   }
 
   .works_title {
@@ -400,30 +499,6 @@ body {
     width: 62%;
     margin: 0;
   }
-}
-
-.project-card {
-  background: linear-gradient(to right bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1));
-  height: 50vh;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  border-radius: 1.25rem;
-}
-
-.project-card > h4 {
-  font-weight: bold;
-  font-family: var(--rubik_font_style);
-  padding: 1rem;
-  width: 100%;
-  color: #091e42;
-}
-
-.project_img {
-  width: 100%;
-  opacity: 0.5;
 }
 
 .project-card:hover {
@@ -455,9 +530,9 @@ body {
 /* ABOUT SECTION */
 #About {
   background: linear-gradient(90deg, rgba(0, 48, 73, 1) 0%, rgba(0, 68, 103, 1) 35%, rgba(2, 26, 38, 1) 100%);
-  height: fit-content;
-  padding: 8.13rem 1rem;
-  overflow: hidden;
+  padding: 4rem 1rem; 
+  height: auto; /* Removed fit-content/overflow constraints if they were causing issues */
+  overflow: hidden; /* Ensure no overflow issues */
 }
 
 .about_text {
@@ -471,30 +546,7 @@ body {
 
 #about_image {
   margin-left: 50%;
-}
-
-#skills {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-#skills img {
-  margin-right: 0.5rem;
-}
-
-#skills h4 {
-  font-weight: bold;
-}
-
-#skills ul {
-  margin-bottom: 2rem;
-}
-
-#skills li {
-  margin-bottom: 2rem;
-  text-align: center;
+  width: 70vw;
 }
 
 .line {
@@ -506,12 +558,13 @@ body {
 
 @media (min-width: 768px) {
   #About {
-    padding: 8.13rem 4rem;
+    padding: 6rem 4rem;
   }
 
   .about_container {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
   }
 
   .about_text {
@@ -519,9 +572,8 @@ body {
   }
 
   #about_image {
-    width: 50vw;
-    margin-right: -15%;
-    margin-left: 1rem;
+    margin-left: 0;
+    width: 35vw;
   }
 
   #skills {
@@ -539,7 +591,7 @@ body {
 /* CONTACT ME SECTION */
 
 .contact_container {
-  padding: 8.13rem 1rem;
+  padding: 4rem 1rem;
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 2rem;
@@ -612,7 +664,7 @@ body {
 @media (min-width: 768px) {
   .contact_container {
     grid-template-columns: repeat(2, 1fr);
-    padding: 8.13rem 4rem;
+    padding: 4rem 4rem;
   }
 
   .contact_container h3 {

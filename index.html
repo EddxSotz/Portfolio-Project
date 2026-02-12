@@ -63,98 +63,146 @@
       </section>
     </main>
 
-    <!-- Recent Works -->
-    <section class="my_work text_styles" id="Portfolio">
-      <div class="works_title">
-        <h3>My recent Works</h3>
-        <span id="top_line"></span>
-      </div>
-
-      <div class="projects-container" id="projects-container">
-        <!-- Project cards will be dynamically added here -->
-      </div>
-      
-      <!-- Modal for project details -->
-      <dialog class="modal" id="projectModal">
-        <div class="modal-content text_styles">
-          <span class="close" id="closeModal"><img src="images/Icon - Cancel.svg" alt="close_popup"></span>
-          <div class="container">
-            <h3 id="modalTitle"></h3>
-            <img src="" alt="Project Image" id="modalImage">
-          </div>          
-          <div class="container details">            
-            <p id="modalDescription"></p>
-            <div class="btn_container">
-              <a id="seeLiveBtn" class="project-button">See Live</a>
-              <a id="seeSourceBtn" class="project-button">See Source</a>
+    <!-- Skills -->
+<section id="Skills" class="text_styles">
+    <div class="skills_title">
+        <h3>My Tech Stack</h3>
+        <span class="section_line"></span>
+    </div>
+    
+    <div class="skills-grid">
+        <div class="skill-card">
+            <div class="skill-info">
+                <h4>HTML5</h4>
+                <div class="stars" aria-label="5 out of 5 stars">
+                    <span class="star filled"></span><span class="star filled"></span><span class="star filled"></span><span class="star filled"></span><span class="star filled"></span>
+                </div>
             </div>
-          </div>                    
         </div>
-      </dialog>
 
-    </section>
+        <div class="skill-card">
+            <div class="skill-info">
+                <h4>CSS3</h4>
+                <div class="stars" aria-label="5 out of 5 stars">
+                   <span class="star filled"></span><span class="star filled"></span><span class="star filled"></span><span class="star filled"></span><span class="star filled"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="skill-card">
+            <div class="skill-info">
+                <h4>JavaScript</h4>
+                <div class="stars" aria-label="5 out of 5 stars">
+                   <span class="star filled"></span><span class="star filled"></span><span class="star filled"></span><span class="star filled"></span><span class="star filled"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="skill-card">
+            <div class="skill-info">
+                <h4>ReactJS</h4>
+                <div class="stars" aria-label="4 out of 5 stars">
+                   <span class="star filled"></span><span class="star filled"></span><span class="star filled"></span><span class="star filled"></span><span class="star"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="skill-card">
+            <div class="skill-info">
+                <h4>TailwindCSS</h4>
+                <div class="stars" aria-label="5 out of 5 stars">
+                   <span class="star filled"></span><span class="star filled"></span><span class="star filled"></span><span class="star filled"></span><span class="star filled"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="skill-card">
+            <div class="skill-info">
+                <h4>Python</h4>
+                <div class="stars" aria-label="3 out of 5 stars">
+                   <span class="star filled"></span><span class="star filled"></span><span class="star filled"></span><span class="star"></span><span class="star"></span>
+                </div>
+            </div>
+        </div>
+
+         <div class="skill-card">
+            <div class="skill-info">
+                <h4>SQL</h4>
+                <div class="stars" aria-label="3 out of 5 stars">
+                   <span class="star filled"></span><span class="star filled"></span><span class="star filled"></span><span class="star"></span><span class="star"></span>
+                </div>
+            </div>
+        </div>
+
+         <div class="skill-card">
+            <div class="skill-info">
+                <h4>TypeScript</h4>
+                <div class="stars" aria-label="3 out of 5 stars">
+                   <span class="star filled"></span><span class="star filled"></span><span class="star filled"></span><span class="star"></span><span class="star"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="skill-card">
+            <div class="skill-info">
+                <h4>Next JS</h4>
+                <div class="stars" aria-label="2 out of 5 stars">
+                   <span class="star filled"></span><span class="star filled"></span><span class="star"></span><span class="star"></span><span class="star"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+      <!-- Projects -->
+<section class="my_work text_styles" id="Portfolio">
+    <div class="works_title">
+      <h3>My Recent Works</h3>
+      <span class="section_line"></span>
+    </div>
+    <div class="projects-container" id="projects-container">
+      </div>
+    <dialog class="modal" id="projectModal">
+      <div class="modal-content text_styles">
+            <span class="close" id="closeModal"><img src="images/Icon - Cancel.svg" alt="close_popup"></span>
+            <div class="container">
+              <h3 id="modalTitle"></h3>
+              <img src="" alt="Project Image" id="modalImage">
+            </div>          
+            <div class="container details">            
+              <p id="modalDescription"></p>
+              <div class="btn_container">
+                <a id="seeLiveBtn" class="project-button">See Live</a>
+                <a id="seeSourceBtn" class="project-button">See Source</a>
+              </div>
+            </div>                    
+      </div>
+    </dialog>
+</section>
 
     <!-- About -->
-    <section id="About" class="text_styles">
-      <div class="about_container">
-        <div class="about_text">
-          <h1>About me</h1>
-          <h5>I am a passionate Web Developer who loves creating meaningful online experiences. I'm all about building websites that not only look great but also function seamlessly across different devices and platforms. With a strong foundation in HTML, CSS, and JavaScript, I bring creativity and innovation to every project I work on. 
-          </h5>
-          <a class="project-button" id="resume_button" href="#"
-            >Get My Resume</a
-          >
-        </div>
-        <img src="images/Group.svg" id="about_image" alt="" />
+<section id="About" class="text_styles">
+  <div class="about_container">
+    <div class="about_text">
+      <h1>About me</h1>
+      <h5>I am a passionate Web Developer who loves creating meaningful online experiences. I'm all about building websites that not only look great but also function seamlessly across different devices and platforms. With a strong foundation in HTML, CSS, and JavaScript, I bring creativity and innovation to every project I work on.</h5>
       </div>
-
-      <span class="line"></span>
-      <div id="skills" class="text_styles">
-        <ul>
-          <li>
-            <h4>
-              <img src="images/Diamond.svg" alt="Diamond shape" />Languages
-            </h4>
-          </li>
-          <li>Javascript</li>
-          <li>HTML</li>
-          <li>CSS</li>
-        </ul>
-        <ul>
-          <li>
-            <h4>
-              <img src="images/Square.svg" alt="Square shape" />Frameworks
-            </h4>
-          </li>
-          <li>React</li>
-          <li>Vite</li>
-        </ul>
-        <ul>
-          <li>
-            <h4><img src="images/Circle.svg" alt="circle shape" /> Skills</h4>
-          </li>
-          <li>Git</li>
-          <li>Github</li>
-          <li>VS Code</li>
-        </ul>
-      </div>
-    </section>
+    <img src="images/Group.svg" id="about_image" alt="" />
+  </div>
+ </section>
 
     <!-- Contact me Section-->
-
-    <div class="contact_container text_styles" id="Contact">
-      <h3>Let's work together to create a website that showcases your brand and delivers results.</h3>
-
-      <form action="https://formspree.io/f/xdovgbzg" method="POST" id="contact_form">
-        <input type="text" name="full_name" id="name" placeholder="Full name" maxlength="30" required/>
-        <input type="email" name="email" id="email" placeholder="Email address" required/>        
-        <textarea name="message" id="text_box" placeholder="Enter text here" maxlength="500" required></textarea>        
-        <div class="btnsGroup">
-        <button class="project-button" type="submit" aria-label="Submit-form">Get in touch</button>
-        <button class="project-button" type="reset" aria-label="Reset-form" id="reset">Reset Form</button>
-        </div>
-      </form>
-    </div>
+<div class="contact_container text_styles" id="Contact">
+  <h3>Let's work together...</h3>
+  <form action="https://formspree.io/f/xdovgbzg" method="POST" id="contact_form">
+      <input type="text" name="full_name" id="name" placeholder="Full name" maxlength="30" required/>
+     <input type="email" name="email" id="email" placeholder="Email address" required/>        
+     <textarea name="message" id="text_box" placeholder="Enter text here" maxlength="500" required></textarea>        
+     <div class="btnsGroup">
+        <button class="project-button" type="submit">Get in touch</button>
+        <button class="project-button" type="reset" id="reset">Reset Form</button>
+     </div>
+  </form>
+</div>
     <!-- Footer -->
     <footer>
       <div id="footer_icons">
