@@ -124,7 +124,7 @@ function createProjectCard(project) {
   const seeDetailsBtn = document.createElement('button');
   seeDetailsBtn.textContent = 'See Details';
   seeDetailsBtn.classList.add('project-button');
-  
+
   card.appendChild(image);
   card.appendChild(title);
   card.appendChild(seeDetailsBtn);
