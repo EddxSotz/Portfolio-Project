@@ -33,7 +33,7 @@ const projects = [
     title: 'Anuncios Ya HN',
     image: 'images/anunciosya.png',
     description: 'A cutting edge secure Classifieds Marketplace for Honduras. A full-stack Next.js application enabling users to buy, sell, and promote products with a focus on trust and safety through AI-powered identity verification.',
-    liveLink: 'https://anuncios-ya-hn.vercel.app/',
+    liveLink: 'https://anunciosyahn.com/',
     sourceLink: 'https://github.com/EddxSotz/AnunciosYaHN',
   },
   {
