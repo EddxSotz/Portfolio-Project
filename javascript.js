@@ -28,13 +28,20 @@ document.querySelectorAll('.nav-item').forEach((n) => {
 
 // Dynamic projects section
 
-const projects = [
+const projects = [  
   {
     title: 'Anuncios Ya HN',
     image: 'images/anunciosya.png',
     description: 'A cutting edge secure Classifieds Marketplace for Honduras. A full-stack Next.js application enabling users to buy, sell, and promote products with a focus on trust and safety through AI-powered identity verification.',
     liveLink: 'https://anunciosyahn.com/',
     sourceLink: 'https://github.com/EddxSotz/AnunciosYaHN',
+  },
+  {
+    title: "Eva's cleaning services LLC",
+    image: 'images/evasCleaning.png',
+    description: 'A real project for a local business located on Birmingham, Alabama. A full-stack Next.js application enabling users to request quotes and get in touch with the business owner. The website is fully responsive and optimized for SEO.',
+    liveLink: 'https://www.evascleaningservicesllc.com/',
+    sourceLink: 'https://github.com/EddxSotz/eva-cleaning-services',
   },
   {
     title: 'Broccolinni',
